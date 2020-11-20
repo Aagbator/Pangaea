@@ -1,0 +1,25 @@
+@import 'utils/variable';
+@import 'utils/colors';
+
+//1.1 reset
+@import 'base/reset';
+
+//1.2 typhography
+@import 'base/typhography';
+
+
+/*3. COMPONENTS */
+@import 'components/cart/cart-list';
+@import 'components/cart/cart-item';
+@import 'components/cart/cart';
+@import 'components/product/product';
+
+/*4. MODULES */
+@import 'modules/layout';
+@import 'modules/header';
+
+/*5. PAGES */
+@import 'pages/home';
+
+/*6. ELEMENTS */
+@import 'elements/theme-switcher';

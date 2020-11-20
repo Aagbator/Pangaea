@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import AppProvider from './AppProvider';
+import './scss/style.scss';
+import DefaultLayout from './components/layouts/DefaultLayout';
+import client from "./ApolloClient";
+import Home from "./pages/Home";
+import {ApolloProvider} from "@apollo/client";
+import React from "react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div data-test="appComponent">
+          <ApolloProvider client={client}>
+              <AppProvider>
+                  <DefaultLayout>
+                      <Home/>
+                  </DefaultLayout>
+              </AppProvider>
+          </ApolloProvider>
+      </div>
   );
 }
 
